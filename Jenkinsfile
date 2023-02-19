@@ -258,7 +258,7 @@ pipeline {
         agent any
         environment{
           def GIT_COMMIT = "${env.GIT_COMMIT}"
-          def BUILD_ID - "${env.BUILD_ID}"
+          def BUILD_ID =   "${env.BUILD_ID}"
          }
         steps{
           echo "${GIT_COMMIT}"
