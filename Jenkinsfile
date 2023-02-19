@@ -264,7 +264,7 @@ pipeline {
           echo "${GIT_COMMIT}"
           echo "triggering deployment"
           // passing variables to job deployment run by github.com/eeganlf/vote-deploy/blob/master/Jenkinsfile
-           build job: 'deployment', parameters: [string(name: 'DOCKERTAG', value: 'BUILD_ID')]
+           build job: 'deployment', parameters: [string(name: 'DOCKERTAG', value: 'GIT_COMMIT')]
         }    
      }
     
